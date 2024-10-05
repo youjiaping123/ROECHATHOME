@@ -1,16 +1,12 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<title>Dimension by HTML5 UP</title>
+		<title>ROE的小站</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	</head>
 	<body class="is-preload">
 
@@ -24,17 +20,23 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Dimension</h1>
-								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+								<h1>RoeChat</h1>
+								<p>ROECHAT智能助手是为中国用户打造的先进AI聚合平台，<br />
+								为您提供便捷访问国内外各大主流AI模型的机会，让智能科技触手可及。</p>
+								<!-- 修改"立即开始"按钮 -->
+								<nav>
+									<ul>
+										<li><a href="https://chat.duoduoyys.fun/" class="button" target="_blank">立即开始</a></li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a href="#intro" class="menu-item">Intro</a></li>
+								<li><a href="#work" class="menu-item">Work</a></li>
+								<li><a href="#about" class="menu-item">About</a></li>
+								<li><a href="#contact" class="menu-item">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -89,12 +91,6 @@
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
 							</article>
 
 						<!-- Elements -->
@@ -343,8 +339,16 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">Copyright &copy; 2024 ROE的小站</p>
 					</footer>
+
+				<!-- 在 <div id="wrapper"> 内部, <footer id="footer"> 之前添加以下代码 -->
+				<ul class="social-icons">
+					<li><a href="#" class="icon brands fa-qq"><span class="label">QQ</span></a></li>
+					<li><a href="#" class="icon brands fa-weixin"><span class="label">微信</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
 
 			</div>
 
@@ -357,6 +361,119 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<!-- 在</body>标签之前添加以下内联样式 -->
+		<style>
+			.menu-item {
+				position: relative;
+				transition: color 0.3s ease;
+			}
+			
+			.menu-item::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				bottom: -5px;
+				left: 0;
+				background-color: #ffffff;
+				transform: scaleX(0);
+				transition: transform 0.3s ease;
+			}
+			
+			.menu-item:hover {
+				color: #ffffff;
+			}
+			
+			.menu-item:hover::after {
+				transform: scaleX(1);
+			}
+
+			/* 原有的菜单项样式保持不变 */
+
+			.social-icons {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				z-index: 1000;
+			}
+
+			.social-icons li {
+				display: inline-block;
+				margin-left: 10px;
+			}
+
+			.social-icons a {
+				color: rgba(255, 255, 255, 0.5);
+				font-size: 1.25em;
+				transition: color 0.3s ease;
+			}
+
+			.social-icons a:hover {
+				color: #ffffff;
+			}
+
+			/* 确保图标在移动设备上也能正确显示 */
+			@media screen and (max-width: 736px) {
+				.social-icons {
+					bottom: 10px;
+					right: 10px;
+				}
+				.social-icons a {
+					font-size: 1em;
+				}
+			}
+
+			/* 现有的样式保持不变 */
+
+			/* 调整"立即开始"按钮样式 */
+			.content nav {
+				margin-top: 1.5em;
+			}
+
+			.content nav ul {
+				display: flex;
+				justify-content: center;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.content nav ul li {
+				padding: 0;
+			}
+
+			.content .button {
+				display: inline-block;
+				width: auto;
+				height: 2.75em;
+				line-height: 2.75em;
+				padding: 0 1.25em;
+				background-color: transparent;
+				border: solid 1px #ffffff;
+				border-radius: 3px;
+				font-size: 0.8em;
+				font-weight: 600;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #ffffff;
+				transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			}
+
+			.content .button:hover {
+				background-color: rgba(255, 255, 255, 0.075);
+				border-color: #ffffff;
+				color: #ffffff;
+			}
+
+			.content .button:active {
+				background-color: rgba(255, 255, 255, 0.175);
+			}
+		</style>
 
 	</body>
 </html>
